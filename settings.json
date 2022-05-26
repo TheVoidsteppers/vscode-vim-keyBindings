@@ -1,0 +1,334 @@
+{
+  // vim settings start
+  "vim.camelCaseMotion.enable": true,
+  "vim.easymotion": true,
+  "vim.foldfix": true, // to avoid fold open up autocamatically
+  "vim.sneak": false,
+  "vim.surround": true,
+  "vim.useCtrlKeys": false,
+  "vim.useSystemClipboard": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-s>": false,
+    "<C-x>": false,
+    "<C-n>": false,
+    "<C-w>": false,
+    "<C-i>": true,
+    "<C-o>": true,
+    "<C-r>": true,
+  },
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.leader": ";",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<C-d>"
+      ],
+      "commands": [
+        "editor.action.moveSelectionToNextFindMatch"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<C-c>"
+      ],
+      "commands": [
+        "editor.action.clipboardCopyAction"
+      ]
+    },
+    {
+      "before": [
+        "<C-v>"
+      ],
+      "commands": [
+        "editor.action.clipboardPasteAction"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    { // which key
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ]
+    },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "lineBreakInsert"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "u"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "U"
+      ],
+      "commands": [
+        "references-view.findReferences"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "i",
+        "n"
+      ],
+      "commands": [
+        "references-view.showCallHierarchy"
+      ]
+    },
+    // -- problem nav
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "k"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "j"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
+    },
+    // -- rename symbol
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "n"
+      ],
+      "commands": [
+        "editor.action.rename",
+      ]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    { // which key
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ]
+    },
+    // repeatly indent in visual mode
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<C-d>"
+      ],
+      "commands": [
+        "editor.action.moveSelectionToNextFindMatch"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "^"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "editor.action.formatSelection"
+      ]
+    },
+    { // p action will not override clipboard content
+      "before": [
+        "p"
+      ],
+      "after": [
+        "p",
+        "g",
+        "v",
+        "y",
+      ]
+    },
+  ],
+  /* vim settings end */
+  /* which key bindings */
+  "whichkey.bindings": [
+    {
+      "key": "e",
+      "name": "Show tree/explorer view",
+      "type": "conditional",
+      "bindings": [
+        {
+          "key": "",
+          "name": "default",
+          "type": "command",
+          "command": "workbench.view.explorer"
+        },
+        {
+          "key": "when:sideBarVisible && explorerViewletVisible",
+          "name": "Hide explorer",
+          "type": "command",
+          "command": "workbench.action.toggleSidebarVisibility"
+        }
+      ],
+    },
+    {
+      "key": "o",
+      "name": "Outline",
+      "type": "conditional",
+      "bindings": [
+        {
+          "key": "",
+          "name": "default",
+          "type": "command",
+          "command": "extension.multiCommand.execute",
+          "args": {
+            "sequence": [
+              "outline.focus",
+              "outline.focus",
+            ]
+          },
+        },
+        {
+          "key": "when:outlinerExplorerView.active && view.outline.visible",
+          "name": "Hide outline",
+          "type": "command",
+          "command": "workbench.action.toggleAuxiliaryBar"
+        }
+      ],
+    },
+    {
+      "key": "g",
+      "name": "Source contrl",
+      "type": "command",
+      "command": "workbench.view.scm",
+    },
+    {
+      "command": "workbench.action.quickOpen",
+      "key": "f",
+      "name": "Find file",
+      "type": "command"
+    },
+    {
+      "command": "workbench.view.search",
+      "key": "F",
+      "name": "Search Word",
+      "type": "command"
+    },
+    {
+      "command": "search.action.openEditor",
+      "key": "w",
+      "name": "New Search Editor",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.gotoSymbol",
+      "key": "s",
+      "name": "Search document symbol",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.showAllSymbols",
+      "key": "S",
+      "name": "Search project symbol",
+      "type": "command"
+    },
+  ],
+}
