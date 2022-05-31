@@ -15,5 +15,6 @@
 
 ### Todo
 
-- [ ] insert mode ctrl + C 不转成 normal mode
 - [ ] space + w 搜索后，支持快捷键跳转, o 预览，回车打开
+- [ ] git 快速代码回滚
+- [ ] 代码自动补全后，输入的文本自动选中
