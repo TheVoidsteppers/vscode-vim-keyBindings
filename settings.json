@@ -14,6 +14,7 @@
     "<C-x>": false,
     "<C-n>": false,
     "<C-w>": false,
+    "<C-y>": false,
     "<C-i>": true,
     "<C-o>": true,
     "<C-r>": true,
