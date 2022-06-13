@@ -92,17 +92,6 @@
     "command": "list.select",
     "when": "listFocus && !inputFocus && hasSearchResult && searchViewletFocus"
   },
-  {
-    "key": "enter",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": [
-        "list.select",
-        "workbench.action.toggleAuxiliaryBar",
-      ]
-    },
-    "when": "listFocus && !inputFocus && hasSearchResult && searchViewletFocus"
-  },
   // -----searching pane end------
   // -----file expoler start------
   { // open file expoler use which key
@@ -382,12 +371,12 @@
   },
   {
     "key": "ctrl+j",
-    "command": "cursorUp",
+    "command": "cursorDown",
     "when": "editorTextFocus && !suggestWidgetVisible && !suggestWidgetVisible && vim.mode == 'Insert'"
   },
   {
     "key": "ctrl+k",
-    "command": "cursorDown",
+    "command": "cursorUp",
     "when": "editorTextFocus && !suggestWidgetVisible && !suggestWidgetVisible && vim.mode == 'Insert'"
   },
   {
