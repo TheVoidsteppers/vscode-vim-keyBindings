@@ -405,7 +405,7 @@
     "when": "editorFocus && vim.mode == 'Normal'"
   },
   {
-    "key": "space",
+    "key": "ctrl+oem_3",
     "command": "whichkey.show",
     "when": "!inputFocus"
   },
@@ -421,22 +421,22 @@
   // ---- search editor start ----
   {
     "key": "tab",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": [
-        "search.action.focusNextSearchResult",
-      ]
-    },
+    "command": "search.action.focusNextSearchResult",
     "when": "inSearchEditor"
   },
   {
     "key": "shift+tab",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": [
-        "search.action.focusPreviousSearchResult",
-      ]
-    },
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "search.action.focusQueryEditorWidget",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "enter",
+    "command": "editor.action.revealDefinition",
     "when": "inSearchEditor"
   },
   // ---- search editor end ----
@@ -612,5 +612,10 @@
     "key": "shift+alt+down",
     "command": "-extension.vim_cmd+alt+down",
     "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+oem_3",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
   },
 ]

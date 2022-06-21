@@ -21,7 +21,7 @@
   },
   "vim.hlsearch": true,
   "vim.incsearch": true,
-  "vim.leader": ";",
+  "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
       "before": [
@@ -63,7 +63,8 @@
   "vim.normalModeKeyBindings": [
     { // which key
       "before": [
-        "<space>"
+        "f",
+        "f"
       ],
       "commands": [
         "whichkey.show"
@@ -132,16 +133,6 @@
         "references-view.findReferences"
       ]
     },
-    {
-      "before": [
-        "<leader>",
-        "i",
-        "n"
-      ],
-      "commands": [
-        "references-view.showCallHierarchy"
-      ]
-    },
     // -- problem nav
     {
       "before": [
@@ -163,22 +154,12 @@
         "editor.action.marker.next"
       ]
     },
-    // -- rename symbol
-    {
-      "before": [
-        "<leader>",
-        "r",
-        "n"
-      ],
-      "commands": [
-        "editor.action.rename",
-      ]
-    },
   ],
   "vim.visualModeKeyBindings": [
     { // which key
       "before": [
-        "<space>"
+        "f",
+        "f"
       ],
       "commands": [
         "whichkey.show"
