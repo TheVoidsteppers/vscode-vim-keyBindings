@@ -118,7 +118,7 @@
     {
       "before": [
         "<leader>",
-        "u"
+        "r"
       ],
       "commands": [
         "editor.action.referenceSearch.trigger"
@@ -127,7 +127,7 @@
     {
       "before": [
         "<leader>",
-        "U"
+        "R"
       ],
       "commands": [
         "references-view.findReferences"
@@ -137,7 +137,7 @@
     {
       "before": [
         "<leader>",
-        "d",
+        "p",
         "k"
       ],
       "commands": [
@@ -147,11 +147,22 @@
     {
       "before": [
         "<leader>",
-        "d",
+        "p",
         "j"
       ],
       "commands": [
         "editor.action.marker.next"
+      ]
+    },
+    // -- cursor
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "k"
+      ],
+      "commands": [
+        "cursorUndo"
       ]
     },
   ],
