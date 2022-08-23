@@ -400,6 +400,10 @@
     "when": "inDebugMode && !focusedSessionIsAttach"
   },
   {
+    "key": "f1",
+    "command": "whichkey.show"
+  },
+  {
     "key": "alt+n",
     "command": "workbench.action.files.newUntitledFile",
     "when": "editorFocus && vim.mode == 'Normal'"
@@ -617,5 +621,9 @@
     "key": "ctrl+oem_3",
     "command": "-workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
+  },
+  {
+    "key": "f1",
+    "command": "-workbench.action.showCommands"
   },
 ]
