@@ -150,6 +150,25 @@
       ]
     },
   ],
+  "vim.normalModeKeyBindings": [
+    // 快捷搜索当前字符串
+    {
+      "before": [
+        "f",
+        "f"
+      ],
+      "after": [
+        "\"",
+        "a",
+        "y",
+        "w",
+        "/",
+        "<c-R>",
+        "a",
+        "<CR>"
+      ]
+    }
+  ],
   "vim.visualModeKeyBindings": [
     // repeatly indent in visual mode
     {
@@ -166,6 +185,22 @@
       ],
       "commands": [
         "editor.action.outdentLines"
+      ]
+    },
+    // 快捷搜索选中字符 todo \v 不使用正则
+    {
+      "before": [
+        "f",
+        "f"
+      ],
+      "after": [
+        "\"",
+        "a",
+        "y",
+        "/",
+        "<c-R>",
+        "a",
+        "<CR>"
       ]
     }
   ],
