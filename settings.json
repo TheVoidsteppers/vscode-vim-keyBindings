@@ -1,8 +1,9 @@
 {
-  // vim settings start
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 200,
   "vim.camelCaseMotion.enable": true,
   "vim.easymotion": true,
-  "vim.foldfix": true, // to avoid fold open up autocamatically
+  "vim.foldfix": true,
   "vim.sneak": false,
   "vim.surround": true,
   "vim.useCtrlKeys": true,
@@ -16,10 +17,7 @@
     "<C-w>": false,
     "<C-y>": false,
     "<C-c>": false,
-    "<C-v>": false,
-    "<C-i>": true,
-    "<C-o>": true,
-    "<C-r>": true,
+    "<C-v>": false
   },
   "vim.hlsearch": true,
   "vim.incsearch": true,
@@ -33,28 +31,9 @@
       "after": [
         "<Esc>"
       ]
-    },
-    {
-      "before": [
-        "k",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
     }
   ],
-  "vim.insertModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<C-d>"
-      ],
-      "commands": [
-        "editor.action.moveSelectionToNextFindMatch"
-      ],
-      "silent": true
-    }
-  ],
+  "vim.insertModeKeyBindingsNonRecursive": [],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
@@ -148,7 +127,7 @@
       "commands": [
         "cursorUndo"
       ]
-    },
+    }
   ],
   "vim.normalModeKeyBindings": [
     // 快捷搜索当前字符串
@@ -207,14 +186,6 @@
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "<C-d>"
-      ],
-      "commands": [
-        "editor.action.moveSelectionToNextFindMatch"
-      ]
-    },
-    {
-      "before": [
         "L"
       ],
       "after": [
@@ -238,7 +209,8 @@
         "editor.action.formatSelection"
       ]
     },
-    { // p action will not override clipboard content
+    // p action will not override clipboard content
+    {
       "before": [
         "p"
       ],
@@ -246,9 +218,9 @@
         "p",
         "g",
         "v",
-        "y",
+        "y"
       ]
-    },
+    }
   ],
   /* vim settings end */
   /* which key bindings */
@@ -270,7 +242,7 @@
           "type": "command",
           "command": "workbench.action.toggleSidebarVisibility"
         }
-      ],
+      ]
     },
     {
       "key": "o",
@@ -285,9 +257,9 @@
           "args": {
             "sequence": [
               "outline.focus",
-              "outline.focus",
+              "outline.focus"
             ]
-          },
+          }
         },
         {
           "key": "when:outlinerExplorerView.active && view.outline.visible",
@@ -295,13 +267,13 @@
           "type": "command",
           "command": "workbench.action.toggleAuxiliaryBar"
         }
-      ],
+      ]
     },
     {
       "key": "g",
       "name": "Source contrl",
       "type": "command",
-      "command": "workbench.view.scm",
+      "command": "workbench.view.scm"
     },
     {
       "command": "workbench.action.quickOpen",
@@ -339,5 +311,5 @@
       "name": "Reopen Closed Editor",
       "type": "command"
     }
-  ],
+  ]
 }

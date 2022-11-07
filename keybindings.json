@@ -299,18 +299,6 @@
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "terminalFocus"
   },
-  // find & replace
-  {
-    "key": "ctrl+f",
-    "command": "editor.action.startFindReplaceAction",
-    "when": "editorFocus && findInputFocussed"
-  },
-  // find & replace
-  {
-    "key": "ctrl+f",
-    "command": "actions.find",
-    "when": "editorFocus && replaceInputBoxFocus"
-  },
   // quit side bar only when explore is focused
   {
     "key": "q",
@@ -461,8 +449,18 @@
     "when": "inSearchEditor"
   },
   {
-    "key": "ctrl+shift+c",
+    "key": "ctrl+m",
     "command": "search.action.focusQueryEditorWidget",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "search.action.focusFilesToInclude",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "search.action.focusFilesToExclude",
     "when": "inSearchEditor"
   },
   {
@@ -536,10 +534,6 @@
     "key": "ctrl+l",
     "command": "-expandLineSelection",
     "when": "textInputFocus"
-  },
-  {
-    "key": "alt+2",
-    "command": "-workbench.action.openEditorAtIndex2"
   },
   {
     "key": "space",
