@@ -37,15 +37,6 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "<leader>",
-        "m"
-      ],
-      "commands": [
-        ":nohl"
-      ]
-    },
-    {
-      "before": [
         "K"
       ],
       "commands": [
@@ -67,6 +58,56 @@
       ],
       "after": [
         "^"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // 快捷搜索当前字符串
+    {
+      "before": [
+        "f",
+        "w"
+      ],
+      "after": [
+        "\"",
+        "a",
+        "y",
+        "w",
+        "/",
+        "<c-R>",
+        "a",
+        "<CR>"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "o"
+      ],
+      "commands": [
+        "outline.focus",
+        "outline.focus"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "commands": [
+        ":nohl"
       ]
     },
     {
@@ -129,25 +170,6 @@
       ]
     }
   ],
-  "vim.normalModeKeyBindings": [
-    // 快捷搜索当前字符串
-    {
-      "before": [
-        "f",
-        "f"
-      ],
-      "after": [
-        "\"",
-        "a",
-        "y",
-        "w",
-        "/",
-        "<c-R>",
-        "a",
-        "<CR>"
-      ]
-    }
-  ],
   "vim.visualModeKeyBindings": [
     // repeatly indent in visual mode
     {
@@ -170,7 +192,7 @@
     {
       "before": [
         "f",
-        "f"
+        "w"
       ],
       "after": [
         "\"",
