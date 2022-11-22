@@ -301,11 +301,6 @@
   },
   // quit side bar only when explore is focused
   {
-    "key": "q",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
-  },
-  {
     "key": "ctrl+p",
     "command": "workbench.action.togglePanel"
   },
