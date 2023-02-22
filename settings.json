@@ -126,6 +126,16 @@
     {
       "before": [
         "<leader>",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
         "o"
       ],
       "commands": [
